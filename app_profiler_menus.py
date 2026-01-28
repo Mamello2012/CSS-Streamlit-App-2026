@@ -3,15 +3,14 @@ import pandas as pd
 import numpy as np
 
 # Set page title
-st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layout="wide")
+st.set_page_config(page_title="Sports equipment reviews for Runners", layout="wide")
 
 # Sidebar Menu
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Publications", "STEM Data Explorer", "Contact"],
+  ["Runner Profile", "Gear Reviews", "Gear Data Explorer", "Contact"],
 )
-
 # Dummy STEM data
 physics_data = pd.DataFrame({
     "Experiment": ["Alpha Decay", "Beta Decay", "Gamma Ray Analysis", "Quark Study", "Higgs Boson"],
@@ -132,4 +131,5 @@ elif menu == "Contact":
     # Add a contact section
     st.header("Contact Information")
     email = "jane.doe@example.com"
+
     st.write(f"You can reach me at {email}.")
