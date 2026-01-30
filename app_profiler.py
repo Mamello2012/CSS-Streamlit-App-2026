@@ -11,7 +11,11 @@ institution = "University Of Free State"
 
 # Display basic profile information
 st.header("Research review")
-st.write("This project explores how students can choose the right courses based on their marks and personal interests. Many students feel confused or unsure about what to study, so this study focuses on their strengths, hobbies, and academic performance. The goal is to provide clear guidance and recommendations to help students make informed decisions about their education"
+st.write("This project explores how students can choose the right courses based on their marks 
+          and personal interests. Many students feel confused or unsure about what to study, so
+          this study focuses on their strengths, hobbies, and academic performance. The goal is to
+          provide clear guidance and recommendations to help students make informed decisions about
+           their education")
 st.write(f"**Name:** {name}")
 #st.write(f"**Field of Research:** {field}")
 st.write(f"**Institution:** {institution}")
@@ -119,6 +123,7 @@ st.header("Contact Information")
 email = "jane.doe@example.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
