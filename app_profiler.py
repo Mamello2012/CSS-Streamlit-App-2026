@@ -3,14 +3,15 @@ import pandas as pd
 import numpy as np
 
 # Title of the app
-st.title("What can i study with My Marks")
+st.title("Which courses can I pursue based on my marks?")
 
 # Collect basic information
 name = "Mamello Malape"
 institution = "University Of Free State"
 
 # Display basic profile information
-st.header("Resear")
+st.header("Research review")
+st.write("This project explores how students can choose the right courses based on their marks and personal interests. Many students feel confused or unsure about what to study, so this study focuses on their strengths, hobbies, and academic performance. The goal is to provide clear guidance and recommendations to help students make informed decisions about their education"
 st.write(f"**Name:** {name}")
 #st.write(f"**Field of Research:** {field}")
 st.write(f"**Institution:** {institution}")
@@ -118,6 +119,7 @@ st.header("Contact Information")
 email = "jane.doe@example.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
