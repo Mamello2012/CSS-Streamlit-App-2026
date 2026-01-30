@@ -41,14 +41,12 @@ import streamlit as st
 st.set_page_config(page_title="Course Recommendation", layout="centered")
 st.title("Course & Education Path Recommendation")
 
-# 1️⃣ Ask for marks
-marks = st.number_input("Enter your marks (0-100):", min_value=0, max_value=100, step=1)
 
-# 2️⃣ Ask for interests (dropdown for safety)
+# Ask for interests (dropdown for safety)
 interests = ["Science", "Arts", "Technology", "Commerce", "Other"]
 interest = st.selectbox("Select your main interest:", interests)
 
-# 3️⃣ Decide education path based on marks
+#  Decide education path based on marks
 if marks > 30:
     edu_path = "University 🎓"
 elif marks < 25:
@@ -56,7 +54,7 @@ elif marks < 25:
 else:  # marks between 25 and 30
     edu_path = "University of Technology ⚙️"
 
-# 4️⃣ Generate recommendation
+# Generate recommendation
 st.subheader("Recommendation:")
 
 if interest == "Science":
@@ -69,7 +67,8 @@ elif interest == "Commerce":
     st.write(f"Based on your marks ({marks}) and interest in Commerce, you can consider: {edu_path} programs in Business, Economics, or Accounting.")
 else:  # Other interests
     st.write(f"Based on your marks ({marks}) and interest in {interest}, you can consider: {edu_path} programs that match your interest.")
-
+#Additional info message
+st.info("For more information, please contact your desired university or college directly.")
 
 
 
@@ -217,6 +216,7 @@ st.header("Contact Information")
 email = "jane.doe@example.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
