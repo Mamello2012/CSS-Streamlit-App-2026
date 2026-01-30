@@ -29,7 +29,13 @@ st.header("Enter Your Marks")
 marks = st.number_input("Enter your marks (0-50):", min_value=0, max_value=50, step=1)
 st.write(f"You entered: {marks}")
 
-
+# Decide what to display based on marks
+if marks > 30:
+    st.success("You can go to a University 🎓")
+elif marks < 25:
+    st.info("You can go to a College 🏫")
+else:  # marks between 25 and 30
+    st.warning("You can go to a University of Technology or Collage⚙️")
 
 
 
@@ -178,6 +184,7 @@ st.header("Contact Information")
 email = "jane.doe@example.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
