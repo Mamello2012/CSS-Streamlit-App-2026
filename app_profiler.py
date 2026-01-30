@@ -36,21 +36,40 @@ elif marks < 25:
     st.info("You can go to a College 🏫")
 else:  # marks between 25 and 30
     st.warning("You can go to a University of Technology or Collage⚙️")
+import streamlit as st
 
-if interest:
-    st.subheader("Recommendation:")
-    st.write(f"Based on your marks ({marks}) and interest in **{interest}**, you can consider:")
-    
-    if "science" in interest.lower():
-        st.write(f"- {edu_path} programs in Science, Engineering, or Medicine")
-    elif "arts" in interest.lower():
-        st.write(f"- {edu_path} programs in Arts, Literature, or Design")
-    elif "technology" in interest.lower() or "engineering" in interest.lower():
-        st.write(f"- {edu_path} programs in Technology, Computer Science, or Engineering")
-    else:
-        st.write(f"- {edu_path} programs that match your interest in **{interest}**")
-else:
-    st.write(f"You can go to **{edu_path}** based on your marks ({marks})")
+st.set_page_config(page_title="Course Recommendation", layout="centered")
+st.title("Course & Education Path Recommendation")
+
+# 1️⃣ Ask for marks
+marks = st.number_input("Enter your marks (0-100):", min_value=0, max_value=100, step=1)
+
+# 2️⃣ Ask for interests (dropdown for safety)
+interests = ["Science", "Arts", "Technology", "Commerce", "Other"]
+interest = st.selectbox("Select your main interest:", interests)
+
+# 3️⃣ Decide education path based on marks
+if marks > 30:
+    edu_path = "University 🎓"
+elif marks < 25:
+    edu_path = "College 🏫"
+else:  # marks between 25 and 30
+    edu_path = "University of Technology ⚙️"
+
+# 4️⃣ Generate recommendation
+st.subheader("Recommendation:")
+
+if interest == "Science":
+    st.write(f"Based on your marks ({marks}) and interest in Science, you can consider: {edu_path} programs in Science, Engineering, or Medicine.")
+elif interest == "Arts":
+    st.write(f"Based on your marks ({marks}) and interest in Arts, you can consider: {edu_path} programs in Arts, Literature, or Design.")
+elif interest == "Technology":
+    st.write(f"Based on your marks ({marks}) and interest in Technology, you can consider: {edu_path} programs in Technology, Computer Science, or Engineering.")
+elif interest == "Commerce":
+    st.write(f"Based on your marks ({marks}) and interest in Commerce, you can consider: {edu_path} programs in Business, Economics, or Accounting.")
+else:  # Other interests
+    st.write(f"Based on your marks ({marks}) and interest in {interest}, you can consider: {edu_path} programs that match your interest.")
+
 
 
 
@@ -198,6 +217,7 @@ st.header("Contact Information")
 email = "jane.doe@example.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
