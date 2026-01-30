@@ -37,6 +37,20 @@ elif marks < 25:
 else:  # marks between 25 and 30
     st.warning("You can go to a University of Technology or Collage⚙️")
 
+if interest:
+    st.subheader("Recommendation:")
+    st.write(f"Based on your marks ({marks}) and interest in **{interest}**, you can consider:")
+    
+    if "science" in interest.lower():
+        st.write(f"- {edu_path} programs in Science, Engineering, or Medicine")
+    elif "arts" in interest.lower():
+        st.write(f"- {edu_path} programs in Arts, Literature, or Design")
+    elif "technology" in interest.lower() or "engineering" in interest.lower():
+        st.write(f"- {edu_path} programs in Technology, Computer Science, or Engineering")
+    else:
+        st.write(f"- {edu_path} programs that match your interest in **{interest}**")
+else:
+    st.write(f"You can go to **{edu_path}** based on your marks ({marks})")
 
 
 
@@ -184,6 +198,7 @@ st.header("Contact Information")
 email = "jane.doe@example.com"
 
 st.write(f"You can reach {name} at {email}.")
+
 
 
 
