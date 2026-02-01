@@ -48,28 +48,59 @@ interest = st.selectbox("Select your main interest:", interests)
 if interest == "Other":
     other_interest = st.text_input("Please specify your interest:")
 
-
 # Generate recommendation
 st.subheader("Recommendation:")
 
 if interest == "Science":
-    st.write(f"Based on your marks ({marks}) and interest in Science, you can consider: {edu_path} programs in Core Science Degrees,Emerging & Interdisciplinary Fields,Environmental & Applied Sciences,Engineering & Technology (Science-based),Medical & Allied Health Fields,Life & Health Sciences.")
+    st.write(
+        f"Based on your marks ({marks}) and interest in Science, "
+        f"you can consider {edu_path} programs in Core Science Degrees, "
+        f"Emerging & Interdisciplinary Fields, Environmental & Applied Sciences, "
+        f"Engineering & Technology (Science-based), Medical & Allied Health Fields, "
+        f"and Life & Health Sciences."
+    )
+
 elif interest == "Arts":
-    st.write(f"Based on your marks ({marks}) and interest in Arts, you can consider: {edu_path} programs in Core Arts & Humanities,Social Sciences & Human Services,Professional & Career-Oriented Arts,Fine & Performing Arts,Language & Literature,Media, Communication & Public Fields, Literature, or Design.")
+    st.write(
+        f"Based on your marks ({marks}) and interest in Arts, "
+        f"you can consider {edu_path} programs in Core Arts & Humanities, "
+        f"Social Sciences & Human Services, Professional & Career-Oriented Arts, "
+        f"Fine & Performing Arts, Language & Literature, Media & Communication, or Design."
+    )
+
 elif interest == "Technology":
-    st.write(f"Based on your marks ({marks}) and interest in Technology, you can consider: {edu_path} programs in Technology, Computer Science, Software Engineering, or Information Technology.")
+    st.write(
+        f"Based on your marks ({marks}) and interest in Technology, "
+        f"you can consider {edu_path} programs in Technology, Computer Science, "
+        f"Software Engineering, or Information Technology."
+    )
+
 elif interest == "Commerce":
-    st.write(f"Based on your marks ({marks}) and interest in Commerce, you can consider: {edu_path} programs in Economics, Accounting, Finance, Business Studies,Business Administration,Financial Technology (FinTech),Cost & Management Accounting,Business Management, Banking .")
+    st.write(
+        f"Based on your marks ({marks}) and interest in Commerce, "
+        f"you can consider {edu_path} programs in Economics, Accounting, Finance, "
+        f"Business Studies, Business Administration, Financial Technology (FinTech), "
+        f"Cost & Management Accounting, Business Management, or Banking."
+    )
+
 else:  # Other interests
-    st.write(f"Based on your marks ({marks}) and interest in {interest}, you can consider: {edu_path} programs that match your interest.")
-#Additional info message
+    st.write(
+        f"Based on your marks ({marks}) and interest in {interest}, "
+        f"you can consider {edu_path} programs that match your interest."
+    )
+
+# Additional info message
 st.info("For more information, please contact your desired university or college directly.")
 
 # Add a contact section
 st.header("Contact Information")
+
 email = "malapemamello@gmail.com"
 
-st.write(f"You can reach {name} at {email} for more assistence .")
+# Make sure 'name' is defined
+st.write(f"You can reach {name} at {email} for more assistance.")
+
+
 
 
 
